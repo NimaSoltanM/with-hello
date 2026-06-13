@@ -65,6 +65,24 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ---
 
+## Running with Docker
+
+Make sure [Docker](https://www.docker.com) is installed, then:
+
+```bash
+docker compose up --build
+```
+
+Open [http://localhost:3000](http://localhost:3000). The database is created and migrated automatically on startup.
+
+To set a custom admin password:
+
+```bash
+ADMIN_PASSWORD=mypassword ADMIN_USERNAME=admin SESSION_SECRET=my-long-secret docker compose up --build
+```
+
+---
+
 ## Technical Decisions
 
 ### Framework — TanStack Start
